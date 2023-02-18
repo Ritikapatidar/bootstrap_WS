@@ -1,0 +1,329 @@
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            background-color: blue;
+        }
+
+        @media screen and (min-width:991px) {
+            .navbar {
+                background-color: black;
+            }
+        }
+
+        .section2 {
+            margin-top: 64px;
+        }
+
+        @media screen and (max-width:991px) {
+            .section2 {
+                margin-top: 97px;
+            }
+        }
+
+        .carousel-item img {
+            height: 80vh;
+        }
+
+        @media screen and (max-width:991px) {
+            .carousel-item img {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+<style>
+</style>
+
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand text-light" href="#">
+                        <img width="50px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa51CHagKG3j3Z_i1DwNhcmg-c_HwzFCS36A&usqp=CAU"
+                            alt="LOGO">
+                        <strong>MX</strong>PLAYER
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mb-2 mb-lg-0 justify-content-evenly w-100 fs-5">
+                            <li class="nav-item my-auto px-2">
+                                <a class="nav-link active text-light" aria-current="page" href="#"><i
+                                        class="fa fa-fw fa-home fs-2 text-primary"></i></a>
+                            </li>
+                            <li class="nav-item my-auto  px-2">
+                                <a class="nav-link text-light" href="#">Shows</a>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <a class="nav-link text-light" href="#">Movies</a>
+                            </li>
+                            <li class="nav-item dropdown my-auto px-2">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" data-bs-target="#dropdown"
+                                    aria-expanded="false">
+                                    Others
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="dropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <a class="nav-link active text-light" aria-current="page" href="#"><i
+                                        class="fa fa-fw fa-search fs-4"></i></a>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <button class="btn btn-secondary border-warning rounded">
+                                    <img width="20px"
+                                        src="data:image/png;base64,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"
+                                        alt="LOGO"> GO-AD_FREE</button>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <a class="nav-link active text-light" aria-current="page" href="#"><i
+                                        class="fa fa-fw fa-solid fa-bell fs-4"></i></a>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+                                <a class="nav-link text-light" href="#">Login</a>
+                            </li>
+                            <li class="nav-item my-auto px-2">
+
+                                <button type="button" class="btn btn-light" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">My List</a></li>
+                                    <li><a class="dropdown-item" href="#">Language Preferences</a></li>
+                                    <li><a class="dropdown-item" href="#">Download App</a></li>
+                                    <li><a class="dropdown-item" href="#">Activate TV</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="nav-link active text-light d-lg-none" aria-current="page" href="#"><i
+                        class="fa fa-fw fa-search fs-2 text-light"></i></a>
+            </div>
+
+
+
+            <ul style="font-size: 10px;" class="navbar m-0 justify-content-evenly d-lg-none w-100 list-unstyled">
+                <li class="nav-item my-auto px-2">
+                    <a class="nav-link text-light" href="#">HOME</a>
+                </li>
+                <li class="nav-item my-auto px-2">
+                    <a class="nav-link text-light" href="#">SHOWS</a>
+                </li>
+                <li class="nav-item my-auto  px-2">
+                    <a class="nav-link text-light" href="#">MOVIES</a>
+                </li>
+                <li class="nav-item my-auto px-2">
+                    <a class="nav-link text-light" href="#">NEW & FREE</a>
+                </li>
+                <li class="nav-item my-auto  px-2">
+                    <a class="nav-link text-light" href="#">MX GOLD</a>
+                </li>
+                <li class="nav-item my-auto px-2">
+                    <a class="nav-link text-light" href="#">MX VDESI</a>
+                </li>
+                <li class="nav-item my-auto  px-2">
+                    <a class="nav-link text-light" href="#">MUSIC</a>
+                </li>
+                <li class="nav-item my-auto px-2">
+                    <a class="nav-link text-light" href="#">BUZZ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="container-fluid section2">
+        <div class="row">
+            <div class="col-sm-12 m-auto">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://gumlet.assettype.com/film-companion%2Fimport%2Fwp-content%2Fuploads%2F2019%2F11%2FFilm-companion-hellaro-Abhishek-Shah-_-Jayesh-More-_-Shraddha-Dangar-Lead-image-3.jpg?auto=format%2Ccompress&fit=max&w=400&dpr=2.6"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1 class="fs-1 fw-bold">HALLARO</h1>
+                                <span class="border-end border-warning pe-2 text-warning">Gujarati</span> <span
+                                    class="ps-1 text-warning">Drama, Dance</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <img height="800vh"
+                                src="https://creativeyatra.com/wp-content/uploads/2019/11/Hellaro-movie-review-creativeyatra.jpg"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1 class="fs-1 fw-bold">HALLARO</h1>
+                                <span class="border-end border-warning pe-2 text-warning">Gujarati</span> <span
+                                    class="ps-1 text-warning">Drama, Dance</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img height="800vh"
+                                src="https://www.bollywoodhungama.com/wp-content/uploads/2022/12/Alia-Bhatt-Ranbir-Kapoor-starrer-Brahmastra-beats-KGF-Chapter-2-emerges-as-Google-top-trending-Movie-in-India-for-2022.jpg"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1 class="fs-1 fw-bold">BRAHMASTRA</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid my-2">
+        <h4 class="text-light">Trending In Movies <span class="text-primary"> > </span></h4>
+        <div class="row">
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/b4f16d94966019.Y3JvcCwxMzIzLDEwMzUsMCwxNjY0.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/e9d0d5130334205.Y3JvcCwxNjE3LDEyNjQsMCww.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://source.boomplaymusic.com/buzzgroup1/M00/32/AE/rBEevGHXumKAKqbrAAGqmG-A7hY70.jpeg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZH_NGe97acF4YMlntHS5fFpbg8qJFlyHoygB77hsnUoNJ8wolDyI4MDIQnR3umbkz9w&usqp=CAU"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/94f844722fbb6c7b92e0cbd1a71297e949349c306c938ce7c9bc402366789313._RI_V_TTW_.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://mews.in/wp-content/uploads/2021/08/Yeh-Jawaani-Hai-Deewani.jpg" class="d-block w-100"
+                    alt="...">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid my-2">
+        <h4 class="text-light">MX Original Web Shows <span class="text-primary"> > </span></h4>
+        <!-- <div class="row">
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/b4f16d94966019.Y3JvcCwxMzIzLDEwMzUsMCwxNjY0.jpg"
+                    class="d-block image-fluid image-responsive w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/e9d0d5130334205.Y3JvcCwxNjE3LDEyNjQsMCww.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://source.boomplaymusic.com/buzzgroup1/M00/32/AE/rBEevGHXumKAKqbrAAGqmG-A7hY70.jpeg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZH_NGe97acF4YMlntHS5fFpbg8qJFlyHoygB77hsnUoNJ8wolDyI4MDIQnR3umbkz9w&usqp=CAU"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/94f844722fbb6c7b92e0cbd1a71297e949349c306c938ce7c9bc402366789313._RI_V_TTW_.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="col-lg-2 col-sm-3"><img height="320vh"
+                    src="https://mews.in/wp-content/uploads/2021/08/Yeh-Jawaani-Hai-Deewani.jpg" class="d-block w-100"
+                    alt="...">
+            </div> -->
+
+
+            <div class="row row-cols-2 row-cols-4 row-cols-md-6 g-2">
+                <div class="col">
+                    <div class="card">
+                      <img    src="https://source.boomplaymusic.com/buzzgroup1/M00/32/AE/rBEevGHXumKAKqbrAAGqmG-A7hY70.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img  src="https://mews.in/wp-content/uploads/2021/08/Yeh-Jawaani-Hai-Deewani.jpg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                      <div class="card">
+                        <img    src="https://source.boomplaymusic.com/buzzgroup1/M00/32/AE/rBEevGHXumKAKqbrAAGqmG-A7hY70.jpeg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img  src="https://mews.in/wp-content/uploads/2021/08/Yeh-Jawaani-Hai-Deewani.jpg" class="card-img-top" alt="...">
+                      </div>
+                    </div>
+                   
+                      <div class="col">
+                          <div class="card">
+                            <img    src="https://source.boomplaymusic.com/buzzgroup1/M00/32/AE/rBEevGHXumKAKqbrAAGqmG-A7hY70.jpeg" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                            <img  src="https://mews.in/wp-content/uploads/2021/08/Yeh-Jawaani-Hai-Deewani.jpg" class="card-img-top" alt="...">
+                          </div>
+                        </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<!--d-none  d-lg-flex -->
