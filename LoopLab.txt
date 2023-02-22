@@ -6,11 +6,17 @@
     <!--Icon CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-   <link rel="stylesheet" href="style.scss">
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+   <!-- <link rel="stylesheet" href="style.scss"> -->
     <title>Vite App</title>
   </head>
   <body>
@@ -23,16 +29,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="#home">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="#explore">Explore</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="#create">Create</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item mx-3">
               <a class="nav-link" href="share">Share</a>
             </li>
           </ul>
@@ -104,19 +110,21 @@
   </header>
 
   <!-- Ecplore Section -->
-  <header id="explore">
+  <section id="explore py-4">
     <div class="container text-center p-5">
       <h2 class="display-4">Explore</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quibusdam voluptas placeat temporibus odio totam dolor! Sint voluptatum modi voluptates quas nobis est similique nam?</p>
-      <button class="btn btn-transparent text-light px-4 py-2">Find Out More</button>
+      <button class="btn btn-transparent btn-outline-light text-light px-4 py-2 my-3">Find Out More</button>
     </div>
-  
-    <div class="container-fluid explore-inner p-5">
+    </section>
+
+  <section class="bg-light py-5">
+    <div class="container explore-inner bg-light text-dark">
       <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <img class="img-fluid d-block rounded-circle" src="https://img.freepik.com/free-photo/close-up-hand-holding-smartphone_23-2149148857.jpg" alt="img">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <h3>Explore & Connect</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. commodi aperiam eius necessitatibus facere commodi aperiam eius necessitatibus facere vero ea voluptates! Quia, optio consectetur!</p>
           <div class="d-flex flex-row">
@@ -140,94 +148,133 @@
       </div>
     </div>
 
-  </header>
+</section>
     
   <!-- Create section -->
-  <header id="create">
-  <div class="container-fluid bg-primary text-center" id="createHead">
+<section id="create" class="bg-primary py-4">
+  <div class="container text-center" id="createHead">
     <h2 class="display-4">Create</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quibusdam voluptas placeat temporibus odio totam dolor! Sint voluptatum modi voluptates quas nobis est similique nam?</p>
-    <button class="btn btn-transparent text-light px-4 py-2">Find Out More</button>
+    <button class="btn btn-transparent btn-outline-light text-light px-4 py-2 my-3">Find Out More</button>
   </div>
-  <div class="container-fluid p-5 create-inner">
+</section>
+<section class="py-5">
+  <div class="container create-inner">
     <div class="row justify-content-center">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h3>Create your passion</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. commodi aperiam eius necessitatibus facere commodi aperiam eius necessitatibus facere vero ea voluptates! Quia, optio consectetur!</p>
         <div class="d-flex flex-row">
-          <div class="p-4">
+          <div class="p-4 align-self-start">
             <i class="bi bi-check"></i>
           </div>
-          <div class="p-4">
+          <div class="p-4 align-self-end">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing uptas adipisci perspiciatis, facilis ducimus eius culpa similique necessitatibus velit! Dolor?</p>
           </div>
         </div>
 
         <div class="d-flex flex-row">
-          <div class="p-4">
+          <div class="p-4 align-self-start">
             <i class="bi bi-check"></i>
           </div>
-          <div class="p-4">
+          <div class="p-4 align-self-end">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos voluptas adipisci perspiciatis, facilis ducimus eius culpa similique necessitatibus velit! Dolor?</p>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <img class="img-fluid d-block rounded-circle" src="https://cdn.elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-1024x640.jpeg" alt="img">
       </div>
     </div>
   </div>
-</header>
+</section> 
 
  <!--Share section -->
- <header id="share">
-  <div class="container-fluid bg-primary text-center" id="shareHead">
+ <section id="share" class="bg-primary py-4">
+  <div class="container text-center" id="shareHead">
     <h2 class="display-4">Share</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quibusdam voluptas placeat temporibus odio totam dolor! Sint voluptatum modi voluptates quas nobis est similique nam?</p>
-    <button class="btn btn-transparent text-light px-4 py-2">Find Out More</button>
+    <button class="btn btn-transparent btn-outline-light text-light px-4 py-2 my-3">Find Out More</button>
   </div>
-  <div class="container-fluid share-inner p-5">
+  </section>
+
+  <section class="bg-light py-5">
+  <div class="container share-inner bg-light text-dark">
     <div class="row justify-content-center">
-      <div class="col-lg-4 p-4 p-lg-none">
+      <div class="col-md-6">
         <img class="img-fluid d-block rounded-circle" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" alt="img">
       </div>
-      <div class="col-lg-4">
+      <div class="col-md-6">
         <h3>Share what you create</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. commodi aperiam eius necessitatibus facere commodi aperiam eius necessitatibus facere vero ea voluptates! Quia, optio consectetur!</p>
         <div class="d-flex flex-row">
-          <div class="p-4">
+          <div class="p-4 align-self-start">
             <i class="bi bi-check"></i>
           </div>
-          <div class="p-4">
+          <div class="p-4 align-self-end">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing uptas adipisci perspiciatis, facilis ducimus eius culpa similique necessitatibus velit! Dolor?</p>
           </div>
         </div>
 
         <div class="d-flex flex-row">
-          <div class="p-4">
+          <div class="p-4 align-self-start">
             <i class="bi bi-check"></i>
           </div>
-          <div class="p-4">
+          <div class="p-4 align-self-end">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos voluptas adipisci perspiciatis, facilis ducimus eius culpa similique necessitatibus velit! Dolor?</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</header>
+</section>
 
-
-<footer class="p-3">
-  <h3>
+<footer class="p-3 text-light">
+  <h3 class="text-center">
     <bold>LoopLAB</bold>
   </h3>
-  <p class="my-2 text-muted"><small>Copyright @ 2023</small></p>
-  <button class="btn btn-primary">Contact Us</button>
+  <p class="my-2 text-muted text-center"><small>Copyright @ 2023</small></p>
+ 
+  <!-- Button trigger modal -->
+  <div class="row">
+    <div class="col text-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Contact Us
+          </button>
+    </div>
+  </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="msg">Message</label>
+                <textarea name="msg" id="msg" cols="3" rows="2" class="form-control"></textarea>
+            </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>  
 </footer>
-
-
-
-
-
-  </body>
+</body>
 </html>
