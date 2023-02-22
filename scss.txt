@@ -1,16 +1,10 @@
-$bg-color: #333;
-$font-color: #fff;
-$primary-color: #008ed6;
-$dark-overlay:rgba(0,0,0,0.7);
-$font-size:30px;
-
 body {
-    background: $bg-color;
-    color: $font-color;
+    background:#333;
+    color:#fff;
 }
 
 .navbar {
-    border-bottom: $primary-color 3px solid;
+    border-bottom: #008ed6 3px solid;
     opacity: 0.8;
 }
 
@@ -19,11 +13,12 @@ body {
     background-size: cover;
     background-attachment: fixed;
     min-height: 700px;
+    }
     .home-inner{
         padding-top:150px;
     }
     .dark-overlay{
-        background-color: $dark-overlay;
+        background-color: rgba(0,0,0,0.7);;
         position: absolute;
         top: 0;
         left: 0;
@@ -33,46 +28,17 @@ body {
     .card-form{
         opacity: 0.8;
     }
-    .bi{
-        color: $primary-color;
-        background:#fff;
-        padding: 4px;
-        border-radius: 5px;
-        font-size: $font-size;;
-    }
-    
-}
-
+.bi{
+    color: #008ed6;
+    background:#fff;
+    padding: 3px;
+    border-radius: 5px;
+    font-size:30px;
+  }
 .card {
-    background: $primary-color;
-}
-
-.input-group button,
-#explore button,
-#create button {
-    border: $font-color 1px solid;
-}
-
-.explore-inner {
-    color: $bg-color;
-    background: $font-color;
-}
-
-.share-inner {
-    background: $font-color;
-    color: $bg-color;
-}
-
-footer {
-    color: $font-color;
-    text-align: center;
+    background:  #008ed6;
 }
 
 p {
     margin: 0;
-}
-
-#create #createHead,
-#share #shareHead {
-    padding: 50px 200px;
 }
