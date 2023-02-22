@@ -23,7 +23,7 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        min-height: 700px;
+        min-height: 758px;
     }
     .card-form{
         opacity: 0.8;
