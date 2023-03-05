@@ -1,0 +1,74 @@
+Practice1=>
+ link=https://stackblitz.com/edit/js-avnpuv?file=index.html
+ Analysis=
+  1. First create a button and give onclick event to it.
+  2. When click on button first() will run.
+  3. In first() function create three promp and store each prompt velue in variables.
+  4. take a Math function max and pass all 3 variables in max function and this function will return maximum value.
+  5. Print the value using writeln() function.
+  6. take 3 new variables and initialy variables=0;
+  7. apply if loop if(number>40) than store the value in new variable. this will done for all 3 variables.
+  8. after this add all new variables and store in a variable. this will return the sum of variable which is greater than 40.
+  
+  
+  Practice2=>
+  link=https://stackblitz.com/edit/js-jzgeyz?file=index.html
+  Analysis=
+  1. Take an array of cities.
+  2. take a for loop which starts from 0 and end at length of array.
+  3. In for loop print value of array[i] using alert.
+  
+  Practice3=>
+  link=https://stackblitz.com/edit/js-pcwedm?file=index.html
+  Analysis=
+  1. take a variable str and store prompt value in this variable.
+  2. call check() function by passing str variable in this.
+  3. In check function apply a if-else function.
+  4. If str==null conditon is true print string is blank else it s not blank. 
+  
+  Practice4=>
+  1. Take a prompt to take string and store this in a variable.
+  2. write string.split(' ') to split string in words using commas.
+  
+  Practice5=>
+  Analysis=
+  1. Take a string in a variable str.
+  2. Use str.substring() function and pass starting and ending index as argument to it , It will return an extracted part of string.
+  3. Use slice() similar to this function but slice will take starting index and length of string which we want to extract.
+  4. substr() is similar to substring() but if we pass negative index than substr() will extract string from last index while substring() from 0.
+  
+  Practice6=>
+  link= https://stackblitz.com/edit/js-yszqxy?file=index.html
+  Analysis=
+  1. Create object of Date class and print it.
+  
+  Practice7=>
+  Analysis=
+  1. Take an array apply push, pop, shift, unshift methods on it.
+  2. pop() method pop the last elemnt of array and  returns the popped element.
+  3. push() method push an element at the last of the array and returns new array element. the element is passed as argument.
+  4. shift() remove first element of array and return it.
+  5. Unshift() adds a new element at the first. returns new array. the element is passed as argument.
+  6. delete property deletes an array element by its index, after deleting element space of element is reserved.
+  
+  Assignment1=>
+  link=https://stackblitz.com/edit/js-3xximv?file=index.html
+  Analisis=
+  1. Take two input fields to enter numbers, 4 radio buttons for addition, subtraction , muliply, divide and two buttons one for add,subtract,divide,multiply and 2nd for reset.
+  2. give id to all input fields and give value to each radio button.
+  3. Apply onclick to calculate button and and when we click on this button calculate() will run.
+  4. Inside calculate() get the value of both input fields and store in varibles.
+  5. select the button using querySelector() and All rdio buttons using querySelectoreAll().
+  6. on clicking on button iterate a loop for all radio buttons and if radio button is checked than store this radio btns value in a variable.
+  7. This value pass to a switch statement.
+  8. Create 4 cases for Add, sub, mul, div and one default case. write code for all this in each one.
+  9. In reset button call reset() onclick of button this will clear all the form data.
+  
+  Assignment2=>
+  link=
+  Analysis=
+  
+  
+  
+  
+  
