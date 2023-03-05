@@ -65,8 +65,20 @@ Practice1=>
   9. In reset button call reset() onclick of button this will clear all the form data.
   
   Assignment2=>
-  link=
+  link=https://stackblitz.com/edit/js-rhkcdn?file=index.html
   Analysis=
+  1. Create a form and give name it inside form create an inout field for date and give id and name to it.
+  2. Create a submit button inside form and onclick of button call validatedate() function by passing date field name to it.
+  3. In this function create a regx for date.
+  4. if date value match with regx than split the date value from '/' and store in a variable.
+  5. Find the value of month, day, year by slited string by getting the index.
+  6. Take an array and store all month days in it.
+  7. if entered date month is 1 or greater than 2 than check that if entered day is greater than 12 print invalid and return false.
+  8. if month value is 2 than check for leap year.
+  9. If year is devided by 4 and 100 or 400  than it will leap year. 
+  10. If year is not leap year and day>=29 than date is invalide.
+  11. If year is leap year and day>29 than date is invalide.
+  12.  if date value does't match with regx than print invalid date in alert and return false.
   
   
   
