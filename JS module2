@@ -1,0 +1,61 @@
+Practice7=>
+1. Create an input type to enter a number.
+2. Create a button and execute enterNum() function on clicking button.
+3. In enterNum function get the value of input field which we enter and call square() function and as a argument  pass the value  of input field and display function.
+4. display function is a callback function which is call in square() after the calculation and
+5. display() print the result by getting result through callback function as argument.
+
+Practice9=>
+1. Create an input type to enter the value.
+2. Create a button and return myfunc() function on clicking button.
+3. In myfunc() get the value of input field in a variable (str).
+4. Pass this value to a new function  promisefunc(str) as argument.
+5. apply .then and .catch to  promisefunc() whie calling.
+6. In  promisefunc() return a new primise and apply a setTimeout() for 500ms and execute an arrow function.
+7. In arrow function take a regular expression and if input string match with regx than reverse the string and call resolve() pass reverse string.
+8. If input string does not match with regx than call resolve() and pass 'wrong input' as an argument.
+9. If promise is resolved than 'then' will execute and if it is rejected than 'catch' will execute, and
+10. display() print the result.
+
+Assignment1=>
+1. Create a form with fields id,name,age,gender,email,location,designation,salary,date of joining,mobile number.
+2. Create a button.
+3. On each input field give an id and apply an individual onblur function and pass the value of input field to it.
+4. for each input field take a blank span tag with some 'id' for dispaying error msg. 
+4. for id field return idValidation() onblur function.
+5. In this function get the value of input field by using 'id'.
+6. Take a regular expression for id. and
+7. If the input field is not blank and id match with regular expression than the input field border will be green.
+8. If the input field is blank or id does't match with regular expression than the input field border will be red and an error message will be shown.
+9. Similarly for name, age, designation,mobile number etc.
+10. For location take a dropdown.
+
+Assignment2=>
+1. Take a button and return clock() function by clicking on button.
+2. In clock() function take a reference variable mytimer for setInterval() function and a vriable 'c' for storing the ms value of 3hr.
+3. In setInterval() pass a callback function myClock() and 1000ms.
+4. in myClock() function find out the hr,min and sec of ms value of 3hr and pring this.
+5. Perform --c.
+6. If (c==0) clear the inteval by calling clearInterval(mytimer) function.
+
+
+
+M3 Practice1=>
+1. Take an input field for entering radius of circle.
+2. Take a button and return func() function by clicking on button.
+3. Inside func() get the value of input field(redius).
+4. Create a function expression with name=getarea and return the area of circle.
+5. Print area by calling getarea();
+
+M3 ractice2=>
+1. Create two input field for entering height and width of rectangle.
+2. Create a button and return myfunc() function by clicking on button.
+3. Get the value of hight and width in myfunc().
+4. Create a consructor with name=Area() and pass height and width  and constructor will automatically call when we create it.
+5. Inside area function perform all calculation and print the result.
+
+
+
+
+
+
