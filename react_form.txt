@@ -1,0 +1,220 @@
+import react from 'react'
+import { useState } from 'react'
+
+
+export function FormComponent() {
+ 
+    const [inputs, setInputs] = useState({});
+    const [inputArr, setInputArr]=useState([])
+    const HandleOnchange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setInputs(values => ({...values, [name]: value}))
+    }
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      inputArr.push(inputs)
+      setInputArr(inputArr)
+    }       
+    inputArr.map((data,id)=> <TableDisplay data={data} key={id}/> )
+   
+    return (
+
+        <div>  
+            <form  onChange={HandleOnchange}>
+                <h4>Student Details: </h4>
+                <label htmlFor="fname">Full Name</label>
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="fname" placeholder="First Name" name='First_name'  value={inputs.First_name || ""} />
+                     
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="mname" placeholder="Middle Name" name='Middle_name'  value={inputs.Middle_name || ""}  />
+                     
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="lname" placeholder="Last Name" name='Last_name'  value={inputs.Last_name || ""}  />
+                   
+                    </div>
+                </div>
+
+                {/* <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <label htmlFor="dob">Date Of Birth</label>
+                        <input type="date" className="form-control" id="dob" placeholder="Date of Birth" value={dob} onChange={HandleOnchange} />
+                      
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="bPlace">Place Of Birth</label>
+                        <input type="text" className="form-control" id="bPlace" placeholder="Birth Place" value={birthPlace} onChange={HandleOnchange} />
+                    
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="language">First Language</label>
+                        <select id="inputState" className="form-control">
+                            <option>Choose...</option>
+                            <option>Hindi</option>
+                            <option>English</option>
+                            <option>American</option>
+                            <option>Urdu</option>
+                            <option>Gujrati</option>
+                        </select>
+                      
+                    </div>
+                </div>
+
+
+                <label htmlFor="city">Address</label>
+                <div className="form-row">
+                    <div className="form-group col-md-3">
+                        <select id="inputCity" value={city} onChange={HandleOnchange} className="form-control">
+                            <option>City</option>
+                            <option>Ahmdabad</option>
+                            <option>Dehli</option>
+                            <option>Mumbai</option>
+                            <option>Kota</option>
+                            <option>Bangulore</option>
+                            <option>Indore</option>
+                            <option>Bhopal</option>
+                        </select>
+                     
+
+                    </div>
+                    <div className="form-group col-md-3">
+                        <select id="inputState" value={state} onChange={HandleOnchange} className="form-control">
+                            <option>State</option>
+                            <option>MP</option>
+                            <option>Gujrat</option>
+                            <option>Rajsthan</option>
+                            <option>Udisa</option>
+                            <option>Bihar</option>
+                        </select>
+                       
+
+                    </div>
+                    <div className="form-group col-md-3">
+                        <select id="inputCountry" value={country} onChange={HandleOnchange} className="form-control">
+                            <option>Country</option>
+                            <option>India</option>
+                            <option>America</option>
+                            <option>China</option>
+                            <option>Pakistan</option>
+                            <option>Japan</option>
+                        </select>
+                       
+
+                    </div>
+                    <div className="form-group col-md-3">
+                        <input type="number" className="form-control" value={pin} onChange={HandleOnchange} id="pin" placeholder="Pin" />
+                       
+                    </div>
+                </div>
+
+                <h4 className='mt-4'>Father Details: </h4>
+                <label htmlFor="fname">Full Name</label>
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="fname" placeholder="First Name" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="mname" placeholder="Middle Name" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="lname" placeholder="Last Name" />
+                    </div>
+                </div>
+
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" className="form-control" id="email" placeholder="Email" />
+                    </div>
+                    <div className="form-group col-md-6">
+                        <label htmlFor="mobile">Mobile Number</label>
+                        <input type="number" className="form-control" id="mobile" placeholder="Mobile Number" />
+                    </div>
+                </div>
+
+
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <label htmlFor="qualification">Qualification</label>
+                        <input type="text" className="form-control" id="qualification" placeholder="Qualification" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="profession">Profession</label>
+                        <input type="text" className="form-control" id="profession" placeholder="Profession" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="designation">Designation</label>
+                        <input type="text" className="form-control" id="designation" placeholder="designation" />
+                    </div>
+                </div>
+
+                <h4 className='mt-4'>Mother Details: </h4>
+                <label htmlFor="fname">Full Name</label>
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="fname" placeholder="First Name" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="mname" placeholder="Middle Name" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <input type="text" className="form-control" id="lname" placeholder="Last Name" />
+                    </div>
+                </div>
+
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" className="form-control" id="email" placeholder="Email" />
+                    </div>
+                    <div className="form-group col-md-6">
+                        <label htmlFor="mobile">Mobile Number</label>
+                        <input type="number" className="form-control" id="mobile" placeholder="Mobile Number" />
+                    </div>
+                </div>
+
+
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <label htmlFor="qualification">Qualification</label>
+                        <input type="text" className="form-control" id="qualification" placeholder="Qualification" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="profession">Profession</label>
+                        <input type="text" className="form-control" id="profession" placeholder="Profession" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="designation">Designation</label>
+                        <input type="text" className="form-control" id="designation" placeholder="designation" />
+                    </div>
+                </div>
+
+                <h4 className='mt-4'>Emergency Contact List: </h4>
+                <div className="form-row">
+                    <div className="form-group col-md-5"> <label htmlFor="relation">Relation</label>
+                        <input type="text" className="form-control" id="relation" placeholder="Relation" />
+                    </div>
+                    <div className="form-group col-md-5"> <label htmlFor="number">Mobile Number</label>
+                        <input type="number" className="form-control" id="number" placeholder="Mobile Number" />
+                    </div>
+                </div> */}
+
+                <button type="submit" className="btn btn-primary"  onClick={handleSubmit}>Submit</button>
+            </form>
+        </div>
+    )
+
+}
+
+function TableDisplay(prop){
+    return(
+       
+            console.log(prop.data)
+      
+    )
+
+}
