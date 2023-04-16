@@ -218,3 +218,8 @@ function TableDisplay(prop){
     )
 
 }
+
+
+
+
+https://stackblitz.com/edit/react-qtpbrn?file=src/formComponent.js
