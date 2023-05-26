@@ -1,0 +1,117 @@
+import { CreateBucketCommand, GetObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import mime from 'mime';
+import fs from 'fs';
+
+// Define Creadentials
+const s3Client = new S3Client({
+  region: "ap-south-1",
+  credentials: {
+    accessKeyId: "Your Access Key",
+    secretAccessKey: "Your Secrete Access Key",
+  }
+})
+
+// // Create Bucket
+const createBucket=async (bucket)=>{
+const command= new CreateBucketCommand({
+  Bucket:bucket,
+});
+const data=await s3Client.send(command);
+}
+createBucket("practice4bucket");
+
+// Upload File
+async function uploadFile(bucket, fname, BODY)
+{
+  const type=mime.getType(fname)
+  try
+  {
+  const command= new PutObjectCommand({
+    Bucket:bucket,
+    Key:fname,
+    Body:BODY,
+    ContentType:type
+  })
+  const data=await s3Client.send(command);
+  console.log(data);
+  return data;
+  }
+  catch(err){
+    console.log("Error", err);
+  }
+}
+const data= fs.readFileSync("/home/ritika.patidar/HTML_CSS_JS/CSS_Module/Module1/Assignment/Assign3_css.html", "utf-8");
+uploadFile("practice4bucket","practice4File.html",data);
+
+
+// Download Single File
+const downloadSingleFile= async (bucket, fname)=>{
+
+  const command= new GetObjectCommand({
+    Bucket:bucket,
+    Key:fname,
+  });
+  try{
+  const data=await s3Client.send(command);
+  const info=await data.Body.transformToString();
+  console.log(info);
+}
+catch(err){
+console.log("Error: ",err);
+}
+}
+downloadSingleFile("practice4bucket", "practice4File.html")
+
+
+// Upload Multiple File
+let i;
+const multiplefiles = ["/home/ritika.patidar/day2/HTMLModule1/parctice1.html","/home/ritika.patidar/day2/Assignments/Assign1.html","/home/ritika.patidar/day2/CSSModule1/reportCard.html", "/home/ritika.patidar/day2/empform.html"]
+async function uploadFile(bucket, fname, BODY) {
+  if (!multiplefiles || multiplefiles[0] == 'undefined') return;
+  const type = mime.getType(fname);
+  try {
+    const command = new PutObjectCommand({
+      Bucket: bucket,
+      Key: fname,
+      Body: BODY,
+      ContentType: type
+    })
+    const data = await s3Client.send(command);
+    console.log(data);
+    return data;
+  }
+  catch (err) {
+    console.log("Error", err);
+  }
+}
+for (i = 1; i < multiplefiles.length; i++) {
+  const data = fs.readFileSync(multiplefiles[i], "utf-8");
+  console.log(data);
+  uploadFile("practice4bucket", `file${i}.html`, JSON.stringify(data));
+}
+
+
+// Download Multiple Files
+const downloadFile= async (bucket, fnames)=>{
+  for(let i=1;i<fnames.length;i++){
+    const command= new GetObjectCommand({
+      Bucket:bucket,
+      Key:fnames[i].filename,
+    });
+    try{
+      const data=await s3Client.send(command);
+      const info=await data.Body.transformToString();
+      console.log("success");
+      console.log(JSON.parse(info));
+    }
+    catch(err){
+    console.log("Error: ",err);
+    }
+  }
+}
+const files = [
+  {path: '/home/ritika.patidar/day1', filename: 'file1.html'},
+  {path: '/home/ritika.patidar/day1', filename: 'file2.html'},
+];
+
+downloadFile("practice4bucket", files)
