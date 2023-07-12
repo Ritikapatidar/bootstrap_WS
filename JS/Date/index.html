@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <input type="date" id="input" placeholder="Enter DOB">
+  <button onclick="age()">Get Age</button>
+  <h4 id="demo"></h4>
+  <h4 id="demo1"></h4>
+  <script>
+    function age() {
+      // DOB
+      let dob1 = document.getElementById("input").value;
+      let getA = new Date(dob1)
+      let getDate = getA.getDate()
+      let getMonth = getA.getMonth() + 1
+      let getYear = getA.getFullYear()
+
+      //  Current Date
+      let d = new Date
+      let cDate = d.getDate()
+      let cMonth = d.getMonth() + 1
+      let cyear = d.getFullYear()
+
+      // Get number of days of month
+      let numDayCMonth = new Date(cyear, cMonth, 0).getDate()
+      let numDayGMonth1 = new Date(getYear, getMonth, 0).getDate()
+
+      let y = cyear - getYear
+      let m = cMonth * numDayCMonth - getMonth * numDayGMonth1
+      let d1 = cDate - getDate
+
+      let result = ((y * 365 + m + d1) / 365).toFixed(3)
+      document.getElementById("demo").innerHTML = `Your age: ${result}`
+      document.getElementById("demo1").innerHTML = ` You are ${y} years ${m} month ${d1} days old `
+      console.log(result);
+
+      console.log(y, m, d1, result / 365, result / 365 * 12, result / 365 * 12 * 30);
+    }
+  </script>
+</body>
+
+</html>
