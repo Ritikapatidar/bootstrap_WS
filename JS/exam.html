@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+</head>
+
+<body>
+    <select name="drop" id="drop"></select>
+    <ul>
+
+    </ul>
+    <script>
+
+        var link = "https://gorest.co.in/public/v2/users"
+        var a = fetch(link)
+        a.then(response => response.json())
+            .then((value) => { data(value) })
+
+
+
+        function data(v) {
+            // console.log(v)
+            var data = ""
+            for (const i of v) {
+                data += `<option name="opt" value=${i.id}>${i.name}</option>`
+            }
+            document.getElementById("drop").innerHTML = data
+        }
+
+        document.getElementById("drop").addEventListener("change", () => {
+            let options = document.querySelectorAll('option')
+            let selected=document.getElementById("drop").value;
+
+                fetch("https://gorest.co.in/public/v2/users")
+                    .then(response => response.json())
+                    .then((val) => { data1(val) })
+
+                function data1(vals) {
+                    console.log(vals)
+                    for(const i of vals){
+                        if(i.id==selected)
+                        {
+                            let ival=i
+                            console.log(i);
+                        }
+                    }
+                
+                }})
+
+
+
+
+
+    </script>
+
+    <!-- <script>
+        let name="ritika";
+        for(i=0;i<name.length;i++)
+        {
+            for(j=i+1;j<=name.length;j++)
+            {
+                if(name[i]==name[j])
+                {
+                    document.writeln("duplicate charactor is: "+name[j])
+                }
+            }
+        }
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    
+    <script>
+        function display(str){
+            let str1=str.split(" ")
+            console.log(str1);
+           for(let p of str1)
+           {
+            let split=p.charAt(0).toLowerCase();
+            if(split=='a' || split== 'e')
+            {
+                let split2= p.charAt(p.length-1)
+                if(split2=='a' || split2=='e')
+                {
+                    console.log("true");
+                }
+                else{
+                    console.log("false");
+                }
+            }
+        //     if(p.endsWith('e' || 'u' ) && (p+1).startsWith('e'))
+        //     {
+        //         console.log(p+1);
+        //     }
+           }
+        }
+
+
+        //    for(let i=0;i<str1.length;i++)
+        //    {
+        //     var vowel=['a','e','i','o','u']
+        //     for(let i=0;i<vowel.length;i++){
+        //     if((str1[i].endsWith(vowel[i])) && (str1[i+1].startsWith(vowel[i])))
+        //     {
+        //         console.log("true");
+        //     }
+        //     else{
+        //         console.log("false");
+        //     }
+        //    }}
+           
+        // }
+        display("how are eou e")
+        display("hello world")
+        // display("hello  every one e world")
+
+    </script>
+</body>
+</html>

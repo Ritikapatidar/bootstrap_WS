@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Operator</title>
+</head>
+
+<body>
+    <script>
+        function spreadAndRest(firstArg, secondArg, ...otherArgs) {
+            console.log(firstArg, secondArg);
+            console.log(otherArgs);
+        }
+        spreadAndRest(...["hello", "hy", "hey", "yoo"]);
+        spreadAndRest(..."hello hy hey");
+        spreadAndRest(...[1, 2, 3, 4, 5, 6]);
+    </script>
+
+
+
+    <div class="container">
+        <button onclick="getItem()">Get</button>
+        <div class="row" id="demo">
+
+      
+        </div>
+    </div>
+    <script>
+        let carddata = fetch("data.json")
+        carddata.then
+            (response => response.json())
+            .then((value) => { show(value) })
+
+
+        function show(val) {
+            // console.log(val)
+            var select = "";
+            for (i = 0; i < val.products.length; i++) {
+                select += `<div class='col-12 col-sm-6 col-lg-4'>
+                    <div class='card'>
+                    <img class="card-img-top" src="${val.products[i].img_src}" alt="Title">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">${val.products[i].pro_name}</h4>
+                        <p class="card-text text-center">${val.products[i].pro_text}</p>
+                    </div>
+                    <div class='card-footer d-flex justify-content-between list-unstyled'>
+                        <a href="#" class="nav-link "><b>See More<i class="bi bi-arrow-right"></i></b></a>
+                        <button class="btn btn-primary" onclick="wish(${val.products[i].id})">Wishlist</button>
+                    </div>
+                </div>
+                </div>`
+            }
+            document.getElementById("demo").innerHTML = select;
+        }
+
+
+
+
+        products = [
+            {
+                "id": 1,
+                "img_src": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-math-90946.jpg&fm=jpg",
+                "pro_name": "Camera",
+                "pro_text": "this is a camera"
+            },
+            {
+                "id": 2,
+                "img_src": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1200&format=pjpg&exif=1&iptc=1",
+                "pro_name": "Watches",
+                "pro_text": "this is watches of best quality"
+            },
+            {
+                "id": 3,
+                "img_src": "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?cs=srgb&dl=pexels-jatin-anand-125779.jpg&fm=jpg",
+                "pro_name": "Watch",
+                "pro_text": "this is a watch"
+            },
+            {
+                "id": 4,
+                "img_src": "https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
+                "pro_name": "Bag",
+                "pro_text": "Lorem ipsum dolor sit amet consectetur."
+            }
+        ]
+        let arr=[]
+        function wish(id) {
+            console.log(id);
+ 
+            var list = products;
+            for(let j of products){
+                if(j.id==id){
+                    if(!arr.includes(j))
+                    {
+                        arr.push(j)
+                        localStorage.setItem("id",JSON.stringify(arr))
+                    }
+                }
+            }
+      
+        }
+        function getItem()
+        {
+            let local=localStorage.getItem("id")
+                  console.log(local)
+        }
+
+    </script>
+</body>
+
+</html>
